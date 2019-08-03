@@ -1,6 +1,8 @@
 package TestCases;
 
 import CommanClass.BaseClass;
+import Utils.JsonConvertor;
+import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -27,5 +29,12 @@ public class GetSingleEmployeeTest  extends BaseClass {
         {
             log.error("Api has an error.");
         }
+    }
+
+    public String fetchID(){
+        JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
+        String id = jsonPath.get("id");
+        log.info("EmployeeID is captured: "+ id);
+        return id;
     }
 }
