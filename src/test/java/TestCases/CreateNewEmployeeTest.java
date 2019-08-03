@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -17,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CreateNewEmployeeTest extends BaseClass {
 
 
-    public  static String getEmployeeData(){
+    public  static HashMap<String,Object> getEmployeeData(){
         JSONParser parser = new JSONParser();
 
         try {
@@ -39,6 +40,13 @@ public class CreateNewEmployeeTest extends BaseClass {
             assertThat(age).isNotNull();
             assertThat(age).isNotBlank();
 
+            HashMap<String, Object> hashMap = new HashMap<String, Object>();
+            hashMap.put("name", name);
+            hashMap.put("salary", salary);
+            hashMap.put("age", age);
+
+
+            return  hashMap;
 //            String id= (String) jsonObject.get("id");
 //            log.info("EmployeeID Of the Employee is : "+ id);
 //            assertThat(id).isNotNull();
@@ -50,8 +58,7 @@ public class CreateNewEmployeeTest extends BaseClass {
             e.printStackTrace();
         }
 
-        return null  ;
-
+    return null;
     }
 
 
@@ -59,20 +66,23 @@ public class CreateNewEmployeeTest extends BaseClass {
     public void CreateEmployee() {
         response = given().header("Content-Type", "application/json")
                 .when().
-                body(getEmployeeData()).
+               body(getEmployeeData()).
                 post("/api/v1/create")
                 .then()
-                .log().all().extract().response();
+                .log().all().assertThat().extract().response();
 
 
         if(response.statusCode() == 200 || response.statusCode() !=200){
+
             log.info("New Employee Record has been created..!!");
         }else
         {
             log.error(" Employee Creation api has an error.");
         }
 
-
+        JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
+        String id = jsonPath.get("id");
+        log.info("EmployeeID is captured: "+ id);
     }
 
     public String getName(){
