@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API AUTOMATION PROJECT">
+    <listeners>
+        <listener class-name="ExtentReports.ExtentReporterNG"/>
+    </listeners>
+
+    <test name="API AUTOMATION TASK">
+
+
+        <classes>
+            <class name="TestCases.CreateNewEmployeeTest"/>
+            <class name="TestCases.GetAll_Employees_Test"/>
+        </classes>
+
+
+
+
+
+    </test>
+
+</suite>
