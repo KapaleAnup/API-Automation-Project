@@ -10,6 +10,7 @@
 
         <classes>
             <class name="TestCases.CreateNewEmployeeTest"/>
+            <class name="TestCases.GetSingleEmployeeTest"/>
             <class name="TestCases.GetAll_Employees_Test"/>
         </classes>
 
