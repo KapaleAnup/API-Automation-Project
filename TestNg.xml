@@ -12,6 +12,7 @@
             <class name="TestCases.CreateNewEmployeeTest"/>
             <class name="TestCases.GetSingleEmployeeTest"/>
             <class name="TestCases.UpdateEmployeeTest"/>
+            <class name="TestCases.DeleteEmployeeTest"/>
             <class name="TestCases.GetAll_Employees_Test"/>
         </classes>
 

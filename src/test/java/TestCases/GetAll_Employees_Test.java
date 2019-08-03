@@ -7,8 +7,8 @@ import static io.restassured.RestAssured.given;
 
 public class GetAll_Employees_Test extends BaseClass {
 
-    @Test(priority = 1,description = "Fetch all the listed Employee data")
-    public void getAllEmployeeData(){
+    @Test(priority = 1, description = "Fetch all the listed Employee data")
+    public void getAllEmployeeData() {
 
         response = given().
                 header("Content-Type", "application/json")
@@ -18,16 +18,14 @@ public class GetAll_Employees_Test extends BaseClass {
                 .log().all().extract().response();
 
 
-        if(response.statusCode() == 200 || response.statusCode() !=200){
+        if (response.statusCode() == 200 || response.statusCode() != 200) {
             log.info("All Employee Record has been Fetched..!!");
-        }else
-        {
+        } else {
             log.error(" Employees fetch api has an error.");
         }
 
 
     }
-
 
 
 }

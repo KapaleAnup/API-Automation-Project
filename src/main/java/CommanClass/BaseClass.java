@@ -5,6 +5,7 @@ import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -19,6 +20,7 @@ public class BaseClass {
 
     public static Response response;
 
+    //Fetch the property files from Property files.
     public BaseClass(){
 
         log = Logger.getLogger("API Automation Project");
@@ -37,8 +39,10 @@ public class BaseClass {
         }
     }
 
+    //BaseUrl is being called here.
     @BeforeClass
     public void Setup(){
+
         log.info("Host Information : " + prop.getProperty("BaseUrl"));
         RestAssured.baseURI = prop.getProperty("BaseUrl");
         log.info("Api has been launched...!!");
