@@ -25,6 +25,8 @@ public class GetAll_Employees_Test extends BaseClass {
         }
 
 
+        Long RespTime=response.time();
+        System.out.println("Response Time in Mili Second for Request is\t"+RespTime);
     }
 
 

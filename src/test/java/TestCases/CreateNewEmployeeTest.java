@@ -81,12 +81,17 @@ public class CreateNewEmployeeTest extends BaseClass {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String id = jsonPath.get("id");
         log.info("EmployeeID is captured: " + id);
+
+        Long RespTime=response.time();
+        System.out.println("Response Time in Mili Second for Request is\t"+RespTime);
     }
 
     //get Name of the employee
     public String getName() {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String name = jsonPath.get("name");
+        assertThat(name).isNotNull();
+        assertThat(name).isNotBlank();
         log.info("Employee Name is captured: " + name);
         return name;
     }
@@ -95,6 +100,8 @@ public class CreateNewEmployeeTest extends BaseClass {
     public String getSalary() {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String salary = jsonPath.get("salary");
+        assertThat(salary).isNotNull();
+        assertThat(salary).isNotBlank();
         log.info("Employee Salary is captured: " + salary);
         return salary;
     }
@@ -103,6 +110,8 @@ public class CreateNewEmployeeTest extends BaseClass {
     public String getAge() {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String age = jsonPath.get("age");
+        assertThat(age).isNotNull();
+        assertThat(age).isNotBlank();
         log.info("Employee Age is captured: " + age);
         return age;
     }
@@ -111,6 +120,8 @@ public class CreateNewEmployeeTest extends BaseClass {
     public String getID() {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String id = jsonPath.get("id");
+        assertThat(id).isNotNull();
+        assertThat(id).isNotBlank();
         log.info("EmployeeID is captured: " + id);
         return id;
     }

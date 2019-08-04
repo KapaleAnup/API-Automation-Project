@@ -73,22 +73,24 @@ public class UpdateEmployeeTest extends BaseClass {
 
         if (response.statusCode() == 200 || response.statusCode() != 200) {
 
-            log.info("Employee details has been changed...");
+            log.info("Employee details has been updated...");
 
-            log.info(singleEmployeeTest.fetchID() + " : Employee detail is being feateched..!!");
+          //  log.info(singleEmployeeTest.fetchID() + " : Updated Employee detail is being feateched..!!");
         } else {
             log.error("Api has an error.");
         }
 
-        JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
-        String updatedname = jsonPath.get("name");
-        log.info("Employee Name is captured: " + updatedname);
+        Long RespTime=response.time();
+        System.out.println("Response Time in Mili Second for Request is\t"+RespTime);
+
     }
 
     //get updatedName of the employee
     public String getupdatedName() {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String updatedname = jsonPath.get("name");
+        assertThat(updatedname).isNotNull();
+        assertThat(updatedname).isNotBlank();
         log.info("Employee Name is captured: " + updatedname);
         return updatedname;
     }

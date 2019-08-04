@@ -13,7 +13,6 @@ public class GetSingleEmployeeTest extends BaseClass {
 
     CreateNewEmployeeTest employeeTest = new CreateNewEmployeeTest();
 
-
     @Test(priority = 1, description = "Fetch only one entry by this Function.")
     public void getEmployeeDetails() {
 
@@ -25,15 +24,21 @@ public class GetSingleEmployeeTest extends BaseClass {
 
         if (response.statusCode() == 200 || response.statusCode() != 200) {
 
-            log.info(employeeTest.getID() + " : Employee detail is being feateched..!!");
+            log.info("EmployeeID: "+employeeTest.getID() + " : Employee detail is being feateched..!!");
         } else {
             log.error("Api has an error.");
         }
+
+        Long RespTime=response.time();
+        System.out.println("Response Time in Mili Second for Request is\t"+RespTime);
     }
 
-    public String fetchID() {
+
+    public static String fetchID() {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String id = jsonPath.get("id");
+        assertThat(id).isNotNull();
+        assertThat(id).isNotBlank();
         log.info("EmployeeID is captured: " + id);
         return id;
     }

@@ -1,0 +1,5 @@
+TestCases/CreateNewEmployeeTest.class
+TestCases/GetAll_Employees_Test.class
+TestCases/GetSingleEmployeeTest.class
+TestCases/UpdateEmployeeTest.class
+TestCases/DeleteEmployeeTest.class

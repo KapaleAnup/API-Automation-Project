@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [API AUTOMATION PROJECT]">
+  <listeners>
+    <listener class-name="ExtentReports.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="API AUTOMATION TASK(failed)">
+    <classes>
+      <class name="TestCases.DeleteEmployeeTest">
+        <methods>
+          <include name="Setup"/>
+          <include name="deleteEmployee"/>
+        </methods>
+      </class> <!-- TestCases.DeleteEmployeeTest -->
+    </classes>
+  </test> <!-- API AUTOMATION TASK(failed) -->
+</suite> <!-- Failed suite [API AUTOMATION PROJECT] -->

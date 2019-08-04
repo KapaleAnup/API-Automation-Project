@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeleteEmployeeTest extends BaseClass {
 
-    // CreateNewEmployeeTest employeeTest = new CreateNewEmployeeTest();
+
     GetSingleEmployeeTest singleEmployeeTest = new GetSingleEmployeeTest();
     UpdateEmployeeTest updateEmployeeTest = new UpdateEmployeeTest();
 
@@ -29,6 +29,8 @@ public class DeleteEmployeeTest extends BaseClass {
             log.error("Api has an error.");
         }
 
+        Long RespTime=response.time();
+        System.out.println("Response Time in Mili Second for Request is\t"+RespTime);
 
     }
 
