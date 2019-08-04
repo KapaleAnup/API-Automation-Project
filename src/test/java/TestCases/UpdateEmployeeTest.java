@@ -7,6 +7,7 @@ import io.restassured.path.json.JsonPath;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.FileReader;
@@ -21,6 +22,7 @@ public class UpdateEmployeeTest extends BaseClass {
 
     GetSingleEmployeeTest singleEmployeeTest = new GetSingleEmployeeTest();
 
+   // @Test(dataProvider = "UpdateEmployeeData")
     public static HashMap<String, Object> UpdateEmployeeDetails() {
         JSONParser parser = new JSONParser();
 
@@ -44,6 +46,7 @@ public class UpdateEmployeeTest extends BaseClass {
             assertThat(age).isNotBlank();
 
             HashMap<String, Object> hashMap = new HashMap<String, Object>();
+
             hashMap.put("name", name + "Test"); //updating the name value by concatinating the "Test" value.
             hashMap.put("salary", salary);
             hashMap.put("age", age);
@@ -59,6 +62,11 @@ public class UpdateEmployeeTest extends BaseClass {
         return null;
     }
 
+//    @DataProvider(name = "UpdateEmployeeData")
+//    public Object[][] getData(){
+//        Object[][] data = {{"TestUser"}};
+//        return data;
+//    }
 
     @Test(priority = 1, description = "Update an employee details.")
     public void UpdateEmployee() {
