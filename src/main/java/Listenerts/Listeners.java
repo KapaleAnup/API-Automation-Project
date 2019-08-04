@@ -1,10 +1,10 @@
-package Listnerts;
+package Listenerts;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listners implements ITestListener {
+public class Listeners implements ITestListener {
 
     public void onTestStart(ITestResult result) {
 

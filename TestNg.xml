@@ -3,6 +3,7 @@
 <suite name="API AUTOMATION PROJECT">
     <listeners>
         <listener class-name="ExtentReports.ExtentReporterNG"/>
+        <listener class-name="Listenerts.Listeners"/>
     </listeners>
 
     <test name="API AUTOMATION TASK">

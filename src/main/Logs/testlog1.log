@@ -1109,3 +1109,87 @@
 2019-08-04 19:15:43,195 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
 2019-08-04 19:15:43,196 [main] INFO API Automation Project - Api has been launched...!!
 2019-08-04 19:15:52,668 [main] INFO API Automation Project - All Employee Record has been Fetched..!!
+2019-08-04 21:01:15,930 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:16,501 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:16,891 [main] INFO API Automation Project - Name Of the Employee is : NewEmployeeCreated41
+2019-08-04 21:01:16,891 [main] INFO API Automation Project - Salary Of the Employee is : 45454
+2019-08-04 21:01:16,891 [main] INFO API Automation Project - Age Of the Employee is : 26
+2019-08-04 21:01:23,097 [main] INFO API Automation Project - New Employee Record has been created..!!
+2019-08-04 21:01:23,182 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:23,183 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:23,186 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:23,186 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:23,194 [main] INFO API Automation Project - Name Of the Employee is : NewEmployeeCreated41
+2019-08-04 21:01:23,195 [main] INFO API Automation Project - Salary Of the Employee is : 45454
+2019-08-04 21:01:23,195 [main] INFO API Automation Project - Age Of the Employee is : 26
+2019-08-04 21:01:23,214 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:23,214 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:23,223 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:23,231 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:25,688 [main] INFO API Automation Project - All Employee Record has been Fetched..!!
+2019-08-04 21:01:43,305 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:43,832 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:44,165 [main] INFO API Automation Project - Name Of the Employee is : NewEmployeeCreated44
+2019-08-04 21:01:44,165 [main] INFO API Automation Project - Salary Of the Employee is : 45454
+2019-08-04 21:01:44,166 [main] INFO API Automation Project - Age Of the Employee is : 26
+2019-08-04 21:01:51,382 [main] INFO API Automation Project - New Employee Record has been created..!!
+2019-08-04 21:01:51,443 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:51,444 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:51,449 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:51,450 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:51,453 [main] INFO API Automation Project - Name Of the Employee is : NewEmployeeCreated44
+2019-08-04 21:01:51,454 [main] INFO API Automation Project - Salary Of the Employee is : 45454
+2019-08-04 21:01:51,455 [main] INFO API Automation Project - Age Of the Employee is : 26
+2019-08-04 21:01:51,475 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:51,475 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:51,481 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:01:51,482 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:01:53,710 [main] INFO API Automation Project - All Employee Record has been Fetched..!!
+2019-08-04 21:02:40,114 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:02:40,733 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:02:41,076 [main] INFO API Automation Project - Name Of the Employee is : NewEmployeeCreated44
+2019-08-04 21:02:41,077 [main] INFO API Automation Project - Salary Of the Employee is : 45454
+2019-08-04 21:02:41,077 [main] INFO API Automation Project - Age Of the Employee is : 26
+2019-08-04 21:02:46,261 [main] INFO API Automation Project - New Employee Record has been created..!!
+2019-08-04 21:02:46,576 [main] INFO API Automation Project - EmployeeID is captured: 24273
+2019-08-04 21:02:46,583 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:02:46,583 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:02:46,600 [main] INFO API Automation Project - EmployeeID is captured: 24273
+2019-08-04 21:02:47,336 [main] INFO API Automation Project - EmployeeID is captured: 24273
+2019-08-04 21:02:47,336 [main] INFO API Automation Project - EmployeeID: 24273 : Employee detail is being feateched..!!
+2019-08-04 21:02:47,337 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:02:47,337 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:02:47,339 [main] INFO API Automation Project - Name Of the Employee is : NewEmployeeCreated44
+2019-08-04 21:02:47,340 [main] INFO API Automation Project - Salary Of the Employee is : 45454
+2019-08-04 21:02:47,341 [main] INFO API Automation Project - Age Of the Employee is : 26
+2019-08-04 21:02:47,357 [main] INFO API Automation Project - EmployeeID is captured: 24273
+2019-08-04 21:02:49,078 [main] INFO API Automation Project - Employee details has been updated...
+2019-08-04 21:02:49,080 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:02:49,080 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:02:49,132 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:02:49,133 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:02:56,894 [main] INFO API Automation Project - All Employee Record has been Fetched..!!
+2019-08-04 21:15:30,272 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:15:30,902 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:15:31,299 [main] INFO API Automation Project - Name Of the Employee is : NewEmployeeCreated45
+2019-08-04 21:15:31,299 [main] INFO API Automation Project - Salary Of the Employee is : 45454
+2019-08-04 21:15:31,299 [main] INFO API Automation Project - Age Of the Employee is : 26
+2019-08-04 21:15:34,823 [main] INFO API Automation Project - New Employee Record has been created..!!
+2019-08-04 21:15:35,181 [main] INFO API Automation Project - EmployeeID is captured: 24285
+2019-08-04 21:15:35,187 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:15:35,188 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:15:35,206 [main] INFO API Automation Project - EmployeeID is captured: 24285
+2019-08-04 21:15:37,974 [main] INFO API Automation Project - EmployeeID is captured: 24285
+2019-08-04 21:15:37,975 [main] INFO API Automation Project - EmployeeID: 24285 : Employee detail is being feateched..!!
+2019-08-04 21:15:37,977 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:15:37,977 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:15:37,979 [main] INFO API Automation Project - Name Of the Employee is : NewEmployeeCreated45
+2019-08-04 21:15:37,979 [main] INFO API Automation Project - Salary Of the Employee is : 45454
+2019-08-04 21:15:38,018 [main] INFO API Automation Project - Age Of the Employee is : 26
+2019-08-04 21:15:38,055 [main] INFO API Automation Project - EmployeeID is captured: 24285
+2019-08-04 21:15:38,833 [main] INFO API Automation Project - Employee details has been updated...
+2019-08-04 21:15:38,834 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:15:38,835 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:15:38,853 [main] INFO API Automation Project - Host Information : http://dummy.restapiexample.com
+2019-08-04 21:15:38,853 [main] INFO API Automation Project - Api has been launched...!!
+2019-08-04 21:15:42,119 [main] INFO API Automation Project - All Employee Record has been Fetched..!!
