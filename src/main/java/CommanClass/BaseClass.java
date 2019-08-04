@@ -23,6 +23,7 @@ public class BaseClass {
     //Fetch the property files from Property files.
     public BaseClass(){
 
+        //Add logger
         log = Logger.getLogger("API Automation Project");
         PropertyConfigurator.configure("./src/main/resources/log4j.properties");
         prop = new Properties();
@@ -43,6 +44,7 @@ public class BaseClass {
     @BeforeClass
     public void Setup(){
 
+        // provide baseurl here and can be read by call the created apis.
         log.info("Host Information : " + prop.getProperty("BaseUrl"));
         RestAssured.baseURI = prop.getProperty("BaseUrl");
         log.info("Api has been launched...!!");
