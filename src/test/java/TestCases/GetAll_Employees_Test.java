@@ -1,6 +1,7 @@
 package TestCases;
 
 import CommanClass.BaseClass;
+import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -14,7 +15,7 @@ public class GetAll_Employees_Test extends BaseClass {
                 header("Content-Type", "application/json")
                 .when()
                 .get("/api/v1/employees")
-                .then()
+                .then().time(Matchers.lessThan(8000L))
                 .log().all().extract().response();
 
 

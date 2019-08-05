@@ -3,6 +3,7 @@ package TestCases;
 import CommanClass.BaseClass;
 import Utils.JsonConvertor;
 import io.restassured.path.json.JsonPath;
+import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -18,13 +19,14 @@ public class GetSingleEmployeeTest extends BaseClass {
 
         response = given().header("Content-Type", "application/json")
                 .when()
-                .get("/api/v1/employee/" + employeeTest.getID() + "")
-                .then().log().all().
+                .get("/api/v1/employee/" + userId + "")
+                .then().time(Matchers.lessThan(5000L))
+                .log().all().
                         assertThat().extract().response();
 
         if (response.statusCode() == 200 || response.statusCode() != 200) {
 
-            log.info("EmployeeID: "+employeeTest.getID() + " : Employee detail is being feateched..!!");
+            log.info("EmployeeID: "+userId + " : Employee detail is being feateched..!!");
         } else {
             log.error("Api has an error.");
         }

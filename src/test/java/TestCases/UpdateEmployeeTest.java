@@ -4,6 +4,7 @@ import CommanClass.BaseClass;
 import Utils.JsonConvertor;
 import Utils.RandomDataGenerator;
 import io.restassured.path.json.JsonPath;
+import org.hamcrest.Matchers;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -62,20 +63,16 @@ public class UpdateEmployeeTest extends BaseClass {
         return null;
     }
 
-//    @DataProvider(name = "UpdateEmployeeData")
-//    public Object[][] getData(){
-//        Object[][] data = {{"TestUser"}};
-//        return data;
-//    }
 
     @Test(priority = 1, description = "Update an employee details.")
     public void UpdateEmployee() {
 
+
         response = given().header("Content-Type", "application/json")
                 .when()
                 .body(UpdateEmployeeDetails())
-                .put("/api/v1/update/" + singleEmployeeTest.fetchID() + "")
-                .then()
+                .put("/api/v1/update/" + userId+ "")
+                .then().time(Matchers.lessThan(5000L))
                 .log().all().assertThat().extract().response();
 
 
@@ -83,13 +80,20 @@ public class UpdateEmployeeTest extends BaseClass {
 
             log.info("Employee details has been updated...");
 
-          //  log.info(singleEmployeeTest.fetchID() + " : Updated Employee detail is being feateched..!!");
+           log.info(userId + " : Updated Employee detail is being feateched..!!");
         } else {
             log.error("Api has an error.");
         }
 
         Long RespTime=response.time();
         System.out.println("Response Time in Mili Second for Request is\t"+RespTime);
+
+        JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
+        String updatedname = jsonPath.get("name");
+        assertThat(updatedname).isNotNull();
+        assertThat(updatedname).isNotBlank();
+        log.info("Employee Name is captured: " + updatedname);
+        this.details=updatedname;
 
     }
 
