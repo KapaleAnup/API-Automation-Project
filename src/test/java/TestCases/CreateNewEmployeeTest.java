@@ -2,13 +2,17 @@ package TestCases;
 
 import CommanClass.BaseClass;
 import Utils.JsonConvertor;
+import Utils.RandomDataGenerator;
 import io.restassured.path.json.JsonPath;
+import org.hamcrest.Matchers;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -43,6 +47,7 @@ public class CreateNewEmployeeTest extends BaseClass {
             assertThat(age).isNotNull();
             assertThat(age).isNotBlank();
 
+
             //Used hashmap to fetch the values in key value pair.
             HashMap<String, Object> hashMap = new HashMap<String, Object>();
             hashMap.put("name", name);
@@ -67,7 +72,7 @@ public class CreateNewEmployeeTest extends BaseClass {
                 .when().
                         body(getEmployeeData()).
                         post("/api/v1/create")
-                .then()
+                .then().time(Matchers.lessThan(5000L))
                 .log().all().assertThat().extract().response();
 
 
@@ -81,9 +86,12 @@ public class CreateNewEmployeeTest extends BaseClass {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String id = jsonPath.get("id");
         log.info("EmployeeID is captured: " + id);
+        assertThat(id).isNotNull();
+        assertThat(id).isNotBlank();
+        this.userId=id;
 
-        Long RespTime=response.time();
-        System.out.println("Response Time in Mili Second for Request is\t"+RespTime);
+        Long RespTime = response.time();
+        System.out.println("Response Time in Mili Second for Request is\t" + RespTime);
     }
 
     //get Name of the employee

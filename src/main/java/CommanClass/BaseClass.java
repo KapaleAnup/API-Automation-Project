@@ -20,6 +20,10 @@ public class BaseClass {
 
     public static Response response;
 
+    public static String userId;
+
+    public static String details;
+
     //Fetch the property files from Property files.
     public BaseClass(){
 
