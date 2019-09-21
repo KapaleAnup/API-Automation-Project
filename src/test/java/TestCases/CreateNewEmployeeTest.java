@@ -98,6 +98,7 @@ public class CreateNewEmployeeTest extends BaseClass {
     public String getName() {
         JsonPath jsonPath = JsonConvertor.ConvertRawtoJson(response);
         String name = jsonPath.get("name");
+
         assertThat(name).isNotNull();
         assertThat(name).isNotBlank();
         log.info("Employee Name is captured: " + name);
